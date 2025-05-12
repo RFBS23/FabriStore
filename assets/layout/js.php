@@ -1,0 +1,11 @@
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="assets/js/carousel.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="assets/js/lazysize.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="assets/js/count-down.js"></script>
+<script type="text/javascript" src="assets/js/wow.min.js"></script>
+<script type="text/javascript" src="assets/js/multiple-modal.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>

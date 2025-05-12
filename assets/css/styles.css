@@ -1,40 +1,22 @@
-/* ---------------------------------------------------------
-    * Name: Ecomus Multipurpose eCommerce HTML Template
-    * Version: 1.0.3
-    * Author: Themesflat
-    * Author URI: http://themesflat.com 
+.menu-listh {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
 
-	* Abstracts variable
+.menu-listh::-webkit-scrollbar {
+    width: 6px;
+}
 
-    * Reset css styles
+.menu-listh::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
 
-    * Components
-        * header
-        * footer
-        * tabs
-        * slider banner
-        * button
-        * range slider
-        * form
-        * nice select
-        * carousel
-        * avatar
-        * pop up
-        * box icon
-        * hover
-        * collection
-        * product
-        * blog
-        * testimonial
-        * lookbook
-        * featured
-        * accordion
-        * zoom
+.menu-listh::-webkit-scrollbar-track {
+    background: transparent;
+}
 
-    * section
-
-    * Responsive
- ------------------------------------------------------------------------------ */
 /*--------- Abstracts variable ---------- */
 @import url(bootstrap-select.min.css);
 :root {
@@ -1826,6 +1808,13 @@ label {
   top: -14px;
   right: -35px;
 }
+.box-nav-ul .menu-listh li:not(:last-child) {
+  margin-bottom: 14px;
+}
+.box-nav-ul .menu-listh .demo-label {
+  top: -14px;
+  right: -35px;
+}
 .box-nav-ul .submenu-default {
   left: -110px;
 }
@@ -2383,6 +2372,9 @@ header.header-bg {
   margin-bottom: 28px;
 }
 .footer ul.footer-menu-list li a:hover {
+  color: var(--primary);
+}
+.footer ul.footer-menu-listh li a:hover {
   color: var(--primary);
 }
 .footer .footer-newsletter form {
