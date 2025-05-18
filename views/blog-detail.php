@@ -104,7 +104,7 @@ $catedestacada = $sql->fetchAll(PDO::FETCH_ASSOC);
                     <div class="blog-detail-main">
                         <div class="blog-detail-main-heading">
                             <div class="title">Something About This Style Of Jeans</div>
-                            <div class="meta">by <span>admin</span> on <span>Oct 02</span></div>
+                            <div class="meta">por <span>FabriDev</span> el <span>00-00-0000</span></div>
                             <div class="image">
                                 <img class="lazyload" data-src="../assets/images/blog/blog-detail.jpg" src="../assets/images/blog/blog-detail.jpg" alt="">
                             </div>
@@ -138,7 +138,7 @@ $catedestacada = $sql->fetchAll(PDO::FETCH_ASSOC);
                                 </li>
                             </ul>
                             <div class="d-flex align-items-center gap-20">
-                                <p>Share:</p>
+                                <p>Compartir:</p>
                                 <ul class="tf-social-icon d-flex style-default">
                                     <li><a href="#" class="box-icon round social-facebook border-line-black"><i class="icon fs-14 icon-fb"></i></a></li>
                                     <li><a href="#" class="box-icon round social-twiter border-line-black"><i class="icon fs-12 icon-Icon-x"></i></a></li>
@@ -154,7 +154,7 @@ $catedestacada = $sql->fetchAll(PDO::FETCH_ASSOC);
                                     <i class="icon-arrow-left"></i>
                                 </a>
                                 <div class="inner">
-                                    <a href="#">PREVIOUS</a>
+                                    <a href="#">REGRESAR</a>
                                     <h6>
                                         <a href="#">Fashionista editors reveal their designer</a>
                                     </h6>
@@ -162,7 +162,7 @@ $catedestacada = $sql->fetchAll(PDO::FETCH_ASSOC);
                             </div>
                             <div class="item position-relative d-flex w-100 justify-content-end next">
                                 <div class="inner text-end">
-                                    <a href="#">NEXT</a>
+                                    <a href="#">SIGUIENTE</a>
                                     <h6>
                                         <a href="#">The next generation of leather alternatives</a>
                                     </h6>

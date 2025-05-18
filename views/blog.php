@@ -108,7 +108,7 @@ $catedestacada = $sql->fetchAll(PDO::FETCH_ASSOC);
                                 <a href="blog-detail.php" class="">The next generation of leather alternatives</a>
                             </div>
                             <div class="article-btn">
-                                <a href="blog-detail.php" class="tf-btn btn-line fw-6">Read more<i class="icon icon-arrow1-top-left"></i></a>
+                                <a href="blog-detail.php" class="tf-btn btn-line fw-6">Leer Más<i class="icon icon-arrow1-top-left"></i></a>
                             </div>
                         </div>
                     </div>

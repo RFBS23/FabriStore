@@ -15,10 +15,10 @@
                                     <!--<p>Address: 1234 Fashion Street, Suite 567, <br> New York, NY 10001</p>-->
                                 </li>
                                 <li>
-                                    <p>Email: <a href="#">fabridevsofwaresolutions@gmail.com</a></p>
+                                    <p>Correo: <a href="#">fabridevsofwaresolutions@gmail.com</a></p>
                                 </li>
                                 <li>
-                                    <p>Phone: <a href="#">(51) 922-289-013</a></p>
+                                    <p>Tel: <a href="#">(51) 922-289-013</a></p>
                                 </li>
                             </ul>
                             <!--

@@ -23,11 +23,15 @@
         ];
     }
 
-    $sql = $con->prepare("select idcategoria, nombrecategoria from categorias where estado = 1;");
+    $sql = $con->prepare("select idcategoria, nombrecategoria from categorias where estado = 1");
+    $sql->execute();
+    $categoriasheader = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+    $sql = $con->prepare("select idcategoria, nombrecategoria from categorias where estado = 1");
     $sql->execute();
     $categorias = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    $sql = $con->prepare("select idsubcategoria, nombresubcategoria from subcategorias where estado = 1;");
+    $sql = $con->prepare("select idsubcategoria, nombresubcategoria from subcategorias where estado = 1");
     $sql->execute();
     $subcategorias = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -167,15 +171,23 @@
                 <div class="sw-pagination-wrapper">
                     <div class="swiper tf-sw-collection" data-preview="4" data-tablet="3" data-mobile="1" data-space-lg="30" data-space-md="30" data-space="15" data-loop="false" data-auto-play="false">
                         <div class="swiper-wrapper">
+                            <?php foreach($categorias as $categorias) { ?>
                             <div class="swiper-slide" lazy="true">
                                 <div class="collection-item-v2 type-small hover-img">
                                     <a href="shop-collection-sub.html" class="collection-inner">
                                         <div class="collection-image img-style radius-10">
-                                            <img class="lazyload" data-src="assets/images/collections/electronic-1.jpg" src="assets/images/collections/electronic-1.jpg" alt="collection-img">
+                                            <?php
+                                                $id = $categorias['idcategoria'];
+                                                $imagen = "assets/images/collections/" . $id . "/principal.jpg";
+                                                if(!file_exists($imagen)){
+                                                    $imagen = "assets/images/notfound/errorcat.gif";
+                                                }
+                                            ?>
+                                            <img class="lazyload" data-src="<?php echo $imagen; ?>" src="<?php echo $imagen; ?>" alt="categorias-img">
                                         </div>
                                         <div class="collection-content">
                                             <div class="top">
-                                                <h5 class="heading fw-5">Screen protection</h5>
+                                                <h5 class="heading fw-5"><?php echo $categorias['nombrecategoria']; ?></h5>
                                                 <p class="subheading">6 items</span></p>
                                             </div>
                                             <div class="bottom">
@@ -185,78 +197,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="swiper-slide" lazy="true">
-                                <div class="collection-item-v2 type-small hover-img">
-                                    <a href="shop-collection-sub.html" class="collection-inner">
-                                        <div class="collection-image img-style radius-10">
-                                            <img class="lazyload" data-src="assets/images/collections/electronic-2.jpg" src="assets/images/collections/electronic-2.jpg" alt="collection-img">
-                                        </div>
-                                        <div class="collection-content">
-                                            <div class="top">
-                                                <h5 class="heading fw-5">Headphone</h5>
-                                                <p class="subheading">6 items</span></p>
-                                            </div>
-                                            <div class="bottom">
-                                                <button class="tf-btn collection-title hover-icon btn-light rounded-full"><span>Ver más</span><i class="icon icon-arrow1-top-left"></i></button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide" lazy="true">
-                                <div class="collection-item-v2 type-small hover-img">
-                                    <a href="shop-collection-sub.html" class="collection-inner">
-                                        <div class="collection-image img-style radius-10">
-                                            <img class="lazyload" data-src="assets/images/collections/electronic-3.jpg" src="assets/images/collections/electronic-3.jpg" alt="collection-img">
-                                        </div>
-                                        <div class="collection-content">
-                                            <div class="top">
-                                                <h5 class="heading fw-5">Cables</h5>
-                                                <p class="subheading">6 items</span></p>
-                                            </div>
-                                            <div class="bottom">
-                                                <button class="tf-btn collection-title hover-icon btn-light rounded-full"><span>Ver más</span><i class="icon icon-arrow1-top-left"></i></button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide" lazy="true">
-                                <div class="collection-item-v2 type-small hover-img">
-                                    <a href="shop-collection-sub.html" class="collection-inner">
-                                        <div class="collection-image img-style radius-10">
-                                            <img class="lazyload" data-src="assets/images/collections/electronic-4.png" src="assets/images/collections/electronic-4.png" alt="collection-img">
-                                        </div>
-                                        <div class="collection-content">
-                                            <div class="top">
-                                                <h5 class="heading fw-5">Adapters</h5>
-                                                <p class="subheading">6 items</span></p>
-                                            </div>
-                                            <div class="bottom">
-                                                <button class="tf-btn collection-title hover-icon btn-light rounded-full"><span>Ver más</span><i class="icon icon-arrow1-top-left"></i></button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide" lazy="true">
-                                <div class="collection-item-v2 type-small hover-img">
-                                    <a href="shop-collection-sub.html" class="collection-inner">
-                                        <div class="collection-image img-style radius-10">
-                                            <img class="lazyload" data-src="assets/images/collections/electronic-5.jpg" src="assets/images/collections/electronic-5.jpg" alt="collection-img">
-                                        </div>
-                                        <div class="collection-content">
-                                            <div class="top">
-                                                <h5 class="heading fw-5">Docks and hubs.</h5>
-                                                <p class="subheading">6 items</span></p>
-                                            </div>
-                                            <div class="bottom">
-                                                <button class="tf-btn collection-title hover-icon btn-light rounded-full"><span>Ver más</span><i class="icon icon-arrow1-top-left"></i></button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="box-sw-navigation">

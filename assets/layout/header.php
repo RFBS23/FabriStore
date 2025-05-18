@@ -111,10 +111,10 @@
                                                 <div class="menu-heading">Categorías</div>
 
                                                 <ul class="menu-listh">
-                                                    <?php foreach ($categorias as $categorias) { ?>
+                                                    <?php foreach ($categoriasheader as $categoriasheader) { ?>
                                                     <li>
                                                         <a href="product-detail.html" class="menu-link-text link">
-                                                            <?php echo $categorias['nombrecategoria']; ?>
+                                                            <?php echo $categoriasheader['nombrecategoria']; ?>
                                                         </a>
                                                     </li>
                                                     <?php }?>
@@ -188,7 +188,6 @@
                             <a href="views/blog.php" class="item-link">Blog</a>
                         </li>
                         <li class="menu-item"><a href="https://fabridev.vercel.app/es" class="item-link">Servicios</a></li>
-                        <li class="menu-item"><a href="https://portafolio-fabridev.vercel.app" class="item-link">Portafolio</a></li>
                     </ul>
 
                 </nav>
